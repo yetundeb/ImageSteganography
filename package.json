@@ -1,0 +1,80 @@
+{
+  "name": "kool-app",
+  "productName": "ImageSteganographyApp",
+  "version": "0.1.0",
+  "description": "My Steganography application on Electron",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "kool-app",
+    "win": {
+      "target": "nsis",
+      "icon": "src/icon.png"
+    },
+    "nsis": {
+      "installerIcon": "src/icon.png",
+      "uninstallerIcon": "src/icon.png",
+      "uninstallDisplayName": "ImageSteganographyApp",
+      "License": "License.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "app": ".",
+      "output": "release"
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Yetunde Babade",
+    "email": "x20216637@student.ncirl.ie"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "kool_app"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-installer-windows": "^3.0.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "electron": "16.0.4",
+    "electron-builder": "^22.14.5"
+  }
+}
