@@ -11,6 +11,7 @@ The main process is as follows:
 	Make use of global object steganography or (stegobject).
 
 	Make use of encode function.
+
 To Encode
 •	Accepts a message as String. 
 •	Accepts image as Image
@@ -18,15 +19,19 @@ To Encode
 •	And returns the data-URL of the image with the encoded message within it.
 
 	Make use of decode function.
+
 To Decode
 •	Accepts image as Image.
 •	HTMLImageElement or String representing the data-URL of the image.
 •	And returns any message found within the image.
 How to use the application:
+
+
 Sender
 Step 1: Loads the original image
 Step 2: Types in the secret message
 Step 3:  Encode the Message (Hide message in the image supplied).
+
 
 Receiver: 
 Step 1: Loads the downloaded Image
