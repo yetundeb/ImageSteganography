@@ -1,7 +1,7 @@
 # ImageSteganography.
 Hiding secret information in image file.
 
-This Image Steganpgraphy project is written in HTML5, CSS and JavaScript on Electron, a cross platform framework.
+This Image Steganography project is written in HTML5, CSS and JavaScript on Electron, a cross platform framework.
 It uses Steganography.js, a JavaScript library created by Peter Eigenschink to encode secret messages into an image. The resulting image is downloaded and decoded to reveal the embedded secret message.
 
 The application calls on algorithms in steganography.js to transform the secret message into binary form that can then be concealed in the alpha channel of the supplied cover image using the functionalities in HTML5 canvas. The decode function is executed through similar algorithm to retrieve the hidden message found in the image.
